@@ -1,0 +1,31 @@
+<!ELEMENT persoane (persoana+)>
+
+<!ELEMENT persoana (nume, prenume, varsta, informatii_personale, educatie, experienta_profesionala, abilitati)>
+
+<!ATTLIST persoana id CDATA #REQUIRED>
+
+<!ELEMENT informatii_personale (adresa, contact)>
+<!ELEMENT adresa (strada, numar, localitate, judet, tara)>
+<!ELEMENT contact (email, telefon, profil_linkedin)>
+<!ELEMENT educatie (institutie, specializare, perioada)>
+<!ELEMENT experienta_profesionala (functie, angajator)>
+<!ELEMENT abilitati (limbi_straine, competente_digitale)>
+
+<!ELEMENT nume (#PCDATA)>
+<!ELEMENT prenume (#PCDATA)>
+<!ELEMENT varsta (#PCDATA)>
+<!ELEMENT strada (#PCDATA)>
+<!ELEMENT numar (#PCDATA)>
+<!ELEMENT localitate (#PCDATA)>
+<!ELEMENT judet (#PCDATA)>
+<!ELEMENT tara (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT telefon (#PCDATA)>
+<!ELEMENT profil_linkedin (#PCDATA)>
+<!ELEMENT institutie (#PCDATA)>
+<!ELEMENT specializare (#PCDATA)>
+<!ELEMENT perioada (#PCDATA)>
+<!ELEMENT functie (#PCDATA)>
+<!ELEMENT angajator (#PCDATA)>
+<!ELEMENT limbi_straine (#PCDATA)>
+<!ELEMENT competente_digitale (#PCDATA)>

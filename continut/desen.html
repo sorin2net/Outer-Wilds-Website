@@ -1,0 +1,179 @@
+
+        <h2>Harta Stelară a Sistemului Solar</h2>
+        <p>Aceasta este o reprezentare grafică live a sistemului solar, generată prin semnalele recepționate de satelitul nostru de adâncime. Urmăriți cu atenție orbitele.</p>
+        
+        <br>
+
+        <svg width="1000" height="600" viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+            
+
+            <!--gradientul pentru culoarea soarelui (centru galben-alb, de la centru galben si pe margini portocaliu)-->
+            <defs>
+                <radialGradient id="gradSoare" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#ffff99" />
+                    <stop offset="40%" stop-color="yellow" />
+                    <stop offset="100%" stop-color="orange" />
+                </radialGradient>
+            </defs>
+
+
+            <!--dreptunghi pentru a desena fundalul-->
+            <rect width="1000" height="600" fill="#050510" />
+
+
+            <!--traiectoriile planetelor (orbite)-->
+            <circle cx="400" cy="300" r="60" fill="none" stroke="gray" stroke-dasharray="2,4" />
+            <circle cx="400" cy="300" r="110" fill="none" stroke="gray" stroke-dasharray="2,4" />
+            <circle cx="400" cy="300" r="170" fill="none" stroke="gray" stroke-dasharray="2,4" />
+            <circle cx="400" cy="300" r="230" fill="none" stroke="gray" stroke-dasharray="2,4" />
+            <circle cx="400" cy="300" r="290" fill="none" stroke="gray" stroke-dasharray="2,4" />
+            <!--stroke-dasharray are 2(pixeli) si 4(spatiu dintre pixeli)-->>
+
+            
+            <!--orbita cometa-->
+            <path id="orbitaCometa" d="M 150 300 A 250 80 0 1 0 650 300 A 250 80 0 1 0 150 300" fill="none" stroke="cyan" stroke-dasharray="2,4" opacity="0.3"/>
+            <!--M inseamna move(de unde incepe desenul), A inseamna arc, ca sa desenez elipsa-->>
+
+            <!--cometa interloper-->
+            <ellipse rx="8" ry="4" fill="cyan">
+                <animateMotion dur="12s" repeatCount="indefinite">
+                    <mpath href="#orbitaCometa"/>
+                </animateMotion>
+            </ellipse>
+            <!--mpath este motion-path, ii spune sina pe care trebuie sa o urmeze in animatia infinite cu un ciclu de 12 secunde-->
+
+
+            <!--soarele-->
+            <g class="planet-preview" data-video="video/sun_exploding.mp4" style="cursor: crosshair;">
+            <circle cx="400" cy="300" r="25" fill="url(#gradSoare)">
+                <animate attributeName="r" values="25;28;25" dur="1.5s" repeatCount="indefinite" />
+            </circle>
+            <!--animat sa pulseze-->
+            </g>
+
+            <!--Hourglass Twins-->
+            <g>
+                <animateTransform attributeName="transform" type="rotate" from="0 400 300" to="360 400 300" dur="11s" repeatCount="indefinite" />
+                <g class="planet-preview" data-video="video/ash_twin.mp4" style="cursor: crosshair;">
+                <circle cx="400" cy="240" r="7" fill="#a65233" /> 
+                </g>
+                <g class="planet-preview" data-video="video/ember_twin.mp4" style="cursor: crosshair;">
+                <circle cx="400" cy="226" r="9" fill="#e6c280" /> 
+                </g>
+            </g>
+            <!--rotatie de la 0 la 360 grade, cu centrul in 400 300, adica centrul soarelui-->
+
+            <!--Timber Hearth si satelitul ei-->
+            <g class="planet-preview" data-video="video/timber_hearth.mp4" style="cursor: crosshair;">
+                <animateTransform attributeName="transform" type="rotate" from="0 400 300" to="360 400 300" dur="15s" repeatCount="indefinite" />
+                <circle cx="400" cy="190" r="14" fill="#2E8B57" /> 
+                <circle cx="400" cy="190" r="14" fill="none" stroke="lightblue" stroke-width="1" /> 
+                <!--aici am pus acea margine ca sa dau un efect de atmosfera, orbiteaza in jurul soarelui-->
+                <g>
+                    <animateTransform attributeName="transform" type="rotate" from="0 400 190" to="360 400 190" dur="4s" repeatCount="indefinite" />
+                    <circle cx="400" cy="165" r="4" fill="#A9A9A9" />
+                    <!--luna se invarte in jurul planetei Timber Hearth-->
+                </g>
+            </g>
+
+
+            <!--Brittle Hollow cu luna sa-->
+            <g class="planet-preview" data-video="video/brittle_hollow.mp4" style="cursor: crosshair;">
+                <animateTransform attributeName="transform" type="rotate" from="0 400 300" to="360 400 300" dur="25s" repeatCount="indefinite" />
+                <circle cx="400" cy="130" r="16" fill="#6A5ACD" />
+                <circle cx="400" cy="130" r="6" fill="#000000" />
+                <!--are gaura neagra in mijloc-->>
+                <g>
+                    <animateTransform attributeName="transform" type="rotate" from="0 400 130" to="360 400 130" dur="5s" repeatCount="indefinite" />
+                    <circle cx="400" cy="105" r="5" fill="#ff4500" />
+                    <!--satelitul sau, la fel se invarte in jurul planetei-->>
+                </g>
+            </g>
+            
+            <!--Giant's Deep-->
+            <g class="planet-preview" data-video="video/giants_deep.mp4" style="cursor: crosshair;">
+                <animateTransform attributeName="transform" type="rotate" from="0 400 300" to="360 400 300" dur="40s" repeatCount="indefinite" />
+                
+                <circle cx="400" cy="70" r="24" fill="#2A4030" opacity="0.8" />
+                <circle cx="400" cy="70" r="24" fill="none" stroke="#48D1CC" stroke-width="2" opacity="0.8" />
+            </g>
+
+            <!--Dark Bramble-->
+            <g class="planet-preview" data-video="video/dark_bramble.mp4" style="cursor: crosshair;">
+                <animateTransform attributeName="transform" type="rotate" from="0 400 300" to="360 400 300" dur="60s" repeatCount="indefinite" />
+                
+                <circle cx="400" cy="10" r="22" fill="#111111" opacity="0.8" />
+                
+                <!--aici sunt tentaculele din lemn, M e ca sa mute "creionul" Q inseamna linie curbata, Z inseamna sa inchida forma conectand ultimul punct de primul-->
+                <path d="M 385 0 Q 400 5 415 -5 Q 405 15 415 25 Q 395 20 380 25 Q 390 10 380 0 Z" fill="none" stroke="#3d2314" stroke-width="3" />
+                <path d="M 395 -8 Q 390 10 385 20 M 405 -8 Q 410 10 405 20 M 380 10 Q 400 15 420 10" fill="none" stroke="#5c3a21" stroke-width="2" />
+                
+                
+                <!--bucatile de planeta sparrta, poligoane-->
+                <polygon points="385,-8 395,-14 405,-14 415,-8 400,2" fill="#4a6b73" />
+                <polygon points="385,28 395,34 405,34 415,28 400,18" fill="#4a6b73" />
+                <polygon points="382,2 372,10 382,18 388,10" fill="#4a6b73" />
+                <polygon points="418,2 428,10 418,18 412,10" fill="#4a6b73" />
+
+                <!--cercurile din mijloc-->
+                <circle cx="400" cy="10" r="6" fill="white" opacity="0.3" />
+                <circle cx="400" cy="10" r="2.5" fill="white" />
+            </g>
+
+            <!--Nava spatiala-->
+            <g>
+                <animateTransform attributeName="transform" type="translate" from="0 0" to="-3 -5" dur="2s" repeatCount="indefinite" />
+                <polygon points="550,450 560,460 550,470" fill="#F0F8FF" />
+                <text x="530" y="440" fill="#F0F8FF" font-family="Arial" font-size="12">Ești aici</text>
+            </g>
+            <!--animatie de miscare spre stanga sus, un triunghi reprezinta-->
+
+            <text x="20" y="30" fill="white" font-family="Arial" font-size="18">Senzor de Adâncime: ACTIV</text>
+            <text x="20" y="50" fill="lightgray" font-family="Arial" font-size="12">Anomalie temporală detectată...</text>
+            
+            <rect x="730" y="20" width="250" height="350" fill="none" stroke="gray" stroke-width="1" rx="10" />
+            <text x="750" y="50" fill="white" font-family="Arial" font-size="18" font-weight="bold">Legendă Sistem Solar</text>
+            
+            <circle cx="750" cy="90" r="8" fill="url(#gradSoare)" />
+            <text x="770" y="95" fill="orange" font-family="Arial" font-size="14">Soarele</text>
+
+            <circle cx="750" cy="120" r="5" fill="#e6c280" />
+            <circle cx="760" cy="120" r="6" fill="#a65233" />
+            <text x="775" y="125" fill="#e6c280" font-family="Arial" font-size="14">Hourglass Twins</text>
+
+            <circle cx="750" cy="155" r="8" fill="#2E8B57" />
+            <text x="770" y="160" fill="#2E8B57" font-family="Arial" font-size="14">Timber Hearth</text>
+
+            <circle cx="750" cy="190" r="10" fill="#6A5ACD" />
+            <text x="770" y="195" fill="#6A5ACD" font-family="Arial" font-size="14">Brittle Hollow</text>
+
+            <circle cx="750" cy="225" r="12" fill="#2A4030" />
+            <text x="770" y="230" fill="#2A4030" font-family="Arial" font-size="14">Giant's Deep</text>
+
+            <g>
+                <!--interiorul-->
+                <circle cx="750" cy="265" r="10" fill="#111111" />
+                
+                <!--tot bucatile planetei-->
+                <polygon points="745,255 755,255 750,260" fill="#4a6b73" />
+                <polygon points="745,275 755,275 750,270" fill="#4a6b73" />
+                <polygon points="740,260 740,270 745,265" fill="#4a6b73" />
+                <polygon points="760,260 760,270 755,265" fill="#4a6b73" />
+                
+                <!--desen minimalist cu path-->
+                <path d="M 746 261 Q 750 265 754 261 M 746 269 Q 750 265 754 269" fill="none" stroke="#5c3a21" stroke-width="1.5" />
+                
+                <circle cx="750" cy="265" r="2" fill="white" />
+            </g>
+            <text x="770" y="270" fill="#8ba8b0" font-family="Arial" font-size="14">Dark Bramble</text>
+
+
+            <ellipse cx="750" cy="305" rx="8" ry="4" fill="cyan" />
+            <text x="770" y="310" fill="cyan" font-family="Arial" font-size="14">The Interloper (Cometa)</text>
+            
+            <polygon points="745,335 755,345 745,355" fill="#F0F8FF" />
+            <text x="770" y="348" fill="#F0F8FF" font-family="Arial" font-size="14">Navetă (Ești aici)</text>
+
+        </svg>
+
+        <p><i>Atenție: Simularea redă vitezele orbitale relativ proporționale (planetele îndepărtate orbitează mai încet).</i></p>

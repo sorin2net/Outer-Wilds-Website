@@ -1,0 +1,37 @@
+<div class="data-pad" style="max-width: 600px; margin: 40px auto; text-align: center;">
+    <h2 style="color: #48D1CC;">Lista de Provizii (Timber Hearth)</h2>
+    <p>Adaugă proviziile necesare pentru următoarea expediție.</p>
+    
+    <div style="margin-bottom: 20px; text-align: left; background: rgba(0,0,0,0.3); padding: 15px; border-radius: 8px;">
+        <label for="nume-produs" style="display: inline-block; width: 140px;">Nume Produs:</label>
+        <input type="text" id="nume-produs" placeholder="ex: Bezele" style="padding: 5px; width: 55%;">
+        <br><br>
+        
+        <label for="cantitate-produs" style="display: inline-block; width: 140px;">Cantitate:</label>
+        <input type="number" id="cantitate-produs" placeholder="ex: 5" min="1" style="padding: 5px; width: 55%;">
+        <br><br>
+
+        <label for="metoda-stocare" style="display: inline-block; width: 140px; color: #e67e22;">Salvare în:</label>
+        <select id="metoda-stocare" style="padding: 5px; width: 58%; background-color: #222; color: white; border: 1px solid #48D1CC;">
+            <option value="local">Web Storage (Local)</option>
+            <option value="indexed">IndexedDB (Bază de date)</option>
+        </select>
+        <br><br>
+        
+        <div style="text-align: right;">
+            <button id="buton-adauga-produs" style="padding: 8px 20px; background-color: #e67e22; border: none; font-weight: bold; cursor: pointer;">Adaugă</button>
+        </div>
+    </div>
+
+    <table border="1" style="width: 100%; border-collapse: collapse; margin-top: 20px;" class="destinations-table">
+        <thead>
+            <tr>
+                <th>Nr.</th>
+                <th>Nume Produs</th>
+                <th>Cantitate</th>
+            </tr>
+        </thead>
+        <tbody id="tabel-cumparaturi-body">
+            </tbody>
+    </table>
+</div>

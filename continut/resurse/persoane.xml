@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--DOCTYPE persoane SYSTEM "persoane.dtd"--> 
+<persoane xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="persoane.xsd">
+    <persoana id="1">
+        <nume>Dumitriu</nume>
+        <prenume>Denis</prenume>
+        <varsta>21</varsta>
+        <informatii_personale>
+            <adresa>
+                <strada>Dacilor</strada>
+                <numar>1</numar>
+                <localitate>Iasi</localitate>
+                <judet>Iasi</judet>
+                <tara>Romania</tara>
+            </adresa>
+            <contact>
+                <email>denis.dumitriu@exemplu.ro</email>
+                <telefon>+40770787157</telefon>
+                <profil_linkedin>linkedin.com/in/denis-dumitriu</profil_linkedin>
+            </contact>
+        </informatii_personale>
+        <educatie>
+            <institutie>Universitatea Tehnica "Gheorghe Asachi"</institutie>
+            <specializare>Automatica si Calculatoare</specializare>
+            <perioada>2023 - Prezent</perioada>
+        </educatie>
+        <experienta_profesionala>
+            <functie>Student</functie>
+            <angajator>-</angajator>
+        </experienta_profesionala>
+        <abilitati>
+            <limbi_straine>Engleza (C1)</limbi_straine>
+            <competente_digitale>C++, XML, Git</competente_digitale>
+        </abilitati>
+    </persoana>
+
+    <persoana id="2">
+        <nume>Ghiorghiu</nume>
+        <prenume>Teodor</prenume>
+        <varsta>21</varsta>
+        <informatii_personale>
+            <adresa>
+                <strada>Stefan cel Mare</strada>
+                <numar>15</numar>
+                <localitate>Pascani</localitate>
+                <judet>Iasi</judet>
+                <tara>Romania</tara>
+            </adresa>
+            <contact>
+                <email>teodor.ghiorghiu@exemplu.ro</email>
+                <telefon>+40123456789</telefon>
+                <profil_linkedin>linkedin.com/in/teodor-ghiorghiu</profil_linkedin>
+            </contact>
+        </informatii_personale>
+        <educatie>
+            <institutie>Universitatea Tehnica "Gheorghe Asachi"</institutie>
+            <specializare>Automatica si Calculatoare</specializare>
+            <perioada>2023 - Prezent</perioada>
+        </educatie>
+        <experienta_profesionala>
+            <functie>Junior Developer</functie>
+            <angajator>TechCorp Pascani</angajator>
+        </experienta_profesionala>
+        <abilitati>
+            <limbi_straine>Engleza (B2), Franceza (A2)</limbi_straine>
+            <competente_digitale>Java, Python, SQL</competente_digitale>
+        </abilitati>
+    </persoana>
+
+    <persoana id="3">
+        <nume>Todiras</nume>
+        <prenume>Claudiu</prenume>
+        <varsta>21</varsta>
+        <informatii_personale>
+            <adresa>
+                <strada>Bulevardul Copou</strada>
+                <numar>21</numar>
+                <localitate>Iasi</localitate>
+                <judet>Iasi</judet>
+                <tara>Romania</tara>
+            </adresa>
+            <contact>
+                <email>claudiu.todiras@exemplu.ro</email>
+                <telefon>+40700000000</telefon>
+                <profil_linkedin>linkedin.com/in/claudiu-todiras</profil_linkedin>
+            </contact>
+        </informatii_personale>
+        <educatie>
+            <institutie>Universitatea Tehnica "Gheorghe Asachi"</institutie>
+            <specializare>Automatica si Calculatoare</specializare>
+            <perioada>2023 - Prezent</perioada>
+        </educatie>
+        <experienta_profesionala>
+            <functie>Intern IT</functie>
+            <angajator>SoftVision Iasi</angajator>
+        </experienta_profesionala>
+        <abilitati>
+            <limbi_straine>Engleza (C1)</limbi_straine>
+            <competente_digitale>JavaScript, React, HTML/CSS</competente_digitale>
+        </abilitati>
+    </persoana>
+
+    <persoana id="4">
+        <nume>Cristea</nume>
+        <prenume>Daria</prenume>
+        <varsta>20</varsta>
+        <informatii_personale>
+            <adresa>
+                <strada>Soseaua Principala</strada>
+                <numar>10</numar>
+                <localitate>Ticau</localitate>
+                <judet>Iasi</judet>
+                <tara>Romania</tara>
+            </adresa>
+            <contact>
+                <email>daria.cristea@exemplu.ro</email>
+                <telefon>+40739481274</telefon>
+                <profil_linkedin>linkedin.com/in/daria-cristea</profil_linkedin>
+            </contact>
+        </informatii_personale>
+        <educatie>
+            <institutie>Universitatea Tehnica "Gheorghe Asachi"</institutie>
+            <specializare>Automatica si Calculatoare</specializare>
+            <perioada>2023 - Prezent</perioada>
+        </educatie>
+        <experienta_profesionala>
+            <functie>Voluntar</functie>
+            <angajator>Crucea Rosie</angajator>
+        </experienta_profesionala>
+        <abilitati>
+            <limbi_straine>Engleza (B2), Germana (B1)</limbi_straine>
+            <competente_digitale>Microsoft Office, Baze de date </competente_digitale>
+        </abilitati>
+    </persoana>
+</persoane>

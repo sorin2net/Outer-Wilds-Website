@@ -1,0 +1,99 @@
+
+        <section class="hero-container">
+            <div class="hero-text">
+                <h2>Alătură-te Outer Wilds Ventures!</h2>
+                <p>Privește-i pe cei patru pionieri care au îndrăznit primii să viseze la stele: <b>Feldspar</b> (cel mai curajos pilot al nostru), <b>Slate</b> (inginerul șef), <b>Gossan</b> (instructorul tău de zbor) și <b>Hornfels</b> (directorul observatorului). Ei au fondat acest program spațial din pură curiozitate. Acum, torța (și bezelele prăjite) trec la tine. Completează dosarul de recrutare de mai jos și pregătește-te pentru prima ta lansare!</p>
+            </div>
+            <div class="hero-image">
+                <img src="imagini/Hearthian_Founders.png" alt="Fondatorii Outer Wilds Ventures">
+            </div>
+        </section>
+        <h2>Formular de Recrutare Spațială</h2>
+        <p>Completează dosarul de mai jos pentru a te alătura programului nostru spațial pe Timber Hearth.</p>
+        
+        <form action="#" method="post">
+            
+            <fieldset>
+                <legend>Informații generale</legend>
+                
+                <label for="nume">Nume:</label>
+                <input type="text" id="nume" name="nume">
+                <br><br>
+                
+                <label for="prenume">Prenume:</label>
+                <input type="text" id="prenume" name="prenume">
+                <br><br>
+
+                <label for="parola">Parolă (Cod acces navetă):</label>
+                <input type="password" id="parola" name="parola">
+                <br><br>
+                
+                <label for="email">Email (Canal de comunicație):</label>
+                <input type="email" id="email" name="email">
+                <br><br>
+                
+                <label for="telefon">Telefon (Frecvență radio):</label>
+                <input type="tel" id="telefon" name="telefon">
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Informații personale</legend>
+                
+                <label for="sex">Sexul (Specia):</label>
+                <select id="sex" name="sex">
+                    <option value="masculin">Masculin</option>
+                    <option value="feminin">Feminin</option>
+                    <option value="hearthian">Hearthian (Fără gen)</option>
+                    <option value="nomai">Nomai</option>
+                </select>
+                <br><br>
+                
+                <label for="mancare">Mâncarea preferată (pentru focul de tabără):</label>
+                <input list="lista_mancare" id="mancare" name="mancare">
+                <datalist id="lista_mancare">
+                    <option value="Bezele">
+                    <option value="Bezele prăjite">
+                    <option value="Supă de pin">
+                    <option value="Rădăcini">
+                    <option value="Pește">
+                </datalist>
+                <br><br>
+                
+                <label for="culoare">Culoarea preferată:</label>
+                <input type="color" id="culoare" name="culoare" value="#ff8c00">
+                <br><br>
+                
+                <label for="data_nasterii">Data nașterii:</label>
+                <input type="date" id="data_nasterii" name="data_nasterii">
+                <br><br>
+                
+                <label for="ora_nasterii">Ora nașterii:</label>
+                <input type="time" id="ora_nasterii" name="ora_nasterii">
+                <br><br>
+                
+                <label for="varsta">Vârsta:</label>
+                0 <input type="range" id="varsta" name="varsta" min="0" max="100" value="22"> 100
+                <br><br>
+                
+                <label for="url_personal">Adresa paginii personale (Link Jurnal Bord):</label>
+                <input type="url" id="url_personal" name="url_personal" placeholder="https://...">
+                <br><br>
+                
+                <label for="descriere">Motivația de a explora:</label><br>
+                <textarea id="descriere" name="descriere" rows="4" cols="50"></textarea>
+            </fieldset>
+
+            <br>
+            
+            <div style="margin-bottom: 20px;">
+                <input type="checkbox" id="acord" name="acord" onchange="document.getElementById('buton_inregistrare').disabled = !this.checked;">
+                <label for="acord" style="display: inline-block; cursor: pointer; color: #e6c280;">
+                    Sunt de acord cu condițiile programului spațial și îmi asum riscurile buclei temporale.
+                </label>
+            </div>
+            
+            <button type="submit" id="buton_inregistrare" disabled>Înregistrează</button>
+            
+        </form>

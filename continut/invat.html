@@ -1,0 +1,104 @@
+<div class="invat-wrapper">
+    
+    <aside class="side-menu">
+        <h3>Navigare Module</h3>
+        <ul>
+            <li><a href="#sectiunea1">Senzori </a></li>
+            <li><a href="#sectiunea2">Cartografiere </a></li>
+            <li><a href="#sectiunea3">Baza de Date </a></li>
+        </ul>
+    </aside>
+
+    <main class="invat-main">
+        <h2>Modul de Învățare și Analiză</h2>
+
+        <section id="sectiunea1" class="data-pad">
+            <h3 class="section-title">Date Telemetrice Live</h3>
+            
+            <p><b>Data și Ora Curentă:</b> <span id="timp-curent" class="date-js">Se încarcă...</span></p>
+            <p><b>URL Conexiune:</b> <span id="url-curent" class="date-js">Se încarcă...</span></p>
+            <p><b>Locația (Senzor Adâncime):</b> <span id="locatie-curenta" class="date-js">Se caută semnal GPS... (Te rugăm să permiți accesul la locație)</span></p>
+            <p><b>Software Navă (Browser):</b> <span id="browser-curent" class="date-js">Se încarcă...</span></p>
+            <p><b>Sistem Operare:</b> <span id="os-curent" class="date-js">Se încarcă...</span></p>
+        </section>
+
+        <section id="sectiunea2" class="data-pad" style="margin-top: 30px;">
+            <h3 class="section-title">Modul Cartografiere (Radar)</h3>
+            <p>Instrucțiuni: Alege culorile și apasă două puncte diferite pe radar pentru a marca un <b>Sector de Scanare</b> (dreptunghi).</p>
+            
+            <div class="canvas-controls" style="margin-bottom: 15px;">
+                <label for="culoare-contur" style="display:inline; margin-right: 10px;">Culoare Contur:</label>
+                <input type="color" id="culoare-contur" value="#48D1CC">
+                
+                <label for="culoare-umplere" style="display:inline; margin-left: 20px; margin-right: 10px;">Culoare Umplere:</label>
+                <input type="color" id="culoare-umplere" value="#e67e22">
+            </div>
+
+            <canvas id="radarCanvas" width="700" height="400" style="border: 2px solid #2a3441; background-color: #050510; cursor: crosshair; border-radius: 8px; max-width: 100%;"></canvas>
+        </section>
+
+        <section id="sectiunea3" class="data-pad" style="margin-top: 30px;">
+            <h3 class="section-title">Structură Bază de Date (Loguri)</h3>
+            <p>Adaugă delimitatoare vizuale în baza de date pentru a separa ciclurile buclei temporale.</p>
+            
+            <div class="table-controls" style="margin-bottom: 20px; background-color: #0d1117; padding: 15px; border-radius: 8px;">
+                <label for="index-tabel" style="display:inline;">Poziție (0, 1, 2...):</label>
+                <input type="number" id="index-tabel" value="1" min="0" style="width: 60px; margin-right: 20px; display:inline; padding: 5px;">
+                
+                <label for="culoare-tabel" style="display:inline;">Culoare Delimitator:</label>
+                <input type="color" id="culoare-tabel" value="#e67e22" style="margin-right: 20px; vertical-align: middle;">
+                
+                <input type="button" value="Adaugă Linie" onclick="adaugaLinie()" style="padding: 8px 15px; cursor: pointer; background-color: #2E8B57; color: white; border: none; border-radius: 5px; font-weight: bold; margin-right: 10px;">
+                <input type="button" value="Adaugă Coloană" onclick="adaugaColoana()" style="padding: 8px 15px; cursor: pointer; background-color: #2E8B57; color: white; border: none; border-radius: 5px; font-weight: bold;">
+            </div>
+
+            <table id="bazaDateLoguri" border="1"  class="destinations-table">
+                <tr>
+                    <th>Frecvență Semnaloscop</th>
+                    <th>Sursă Semnal</th>
+                    <th>Locație Detectată</th>
+                </tr>
+                <tr>
+                    <td>Outer Wilds Ventures</td>
+                    <td>Chert (Tobe)</td>
+                    <td>Ember Twin</td>
+                </tr>
+                <tr>
+                    <td>Outer Wilds Ventures</td>
+                    <td>Riebeck (Banjo)</td>
+                    <td>Brittle Hollow</td>
+                </tr>
+                <tr>
+                    <td>Outer Wilds Ventures</td>
+                    <td>Feldspar (Muzicuță)</td>
+                    <td>Dark Bramble</td>
+                </tr>
+                <tr>
+                    <td>Fluctuații Cuantice</td>
+                    <td>Fragment de Piatră Cuantică</td>
+                    <td>Timber Hearth</td>
+                </tr>
+                <tr>
+                    <td>Fluctuații Cuantice</td>
+                    <td>Turnul Cunoașterii Cuantice</td>
+                    <td>Brittle Hollow</td>
+                </tr>
+                <tr>
+                    <td>Semnal de Urgență (Distress Beacon)</td>
+                    <td>Naveta de Evadare 1</td>
+                    <td>Brittle Hollow</td>
+                </tr>
+                <tr>
+                    <td>Semnal de Urgență (Distress Beacon)</td>
+                    <td>Naveta de Evadare 2</td>
+                    <td>Ember Twin</td>
+                </tr>
+                <tr>
+                    <td>Semnale Radio (Deep Space)</td>
+                    <td>Satelitul de Adâncime</td>
+                    <td>Marginea Sistemului Solar</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+</div>

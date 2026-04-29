@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Outer Wilds Ventures</title>
+    <link rel="stylesheet" href="css/stil.css">
+    <script src="js/script.js" defer></script>
+
+    <script>
+        async function schimbaContinut(resursa, jsFisier, jsFunctie) {
+            try {
+                const response = await fetch(resursa + '.html');
+
+                if (!response.ok) {
+                    throw new Error(`Eroare de rețea: ${response.status}`);
+                }
+
+                const html = await response.text();
+
+                const container = document.getElementById("continut");
+                if (!container) return; 
+
+                container.innerHTML = html;
+                void container.offsetHeight; 
+
+                if (jsFisier) {
+                    let scriptExistent = document.querySelector(`script[src="${jsFisier}"]`);
+                    
+                    if (!scriptExistent) {
+                        var elementScript = document.createElement('script');
+                        elementScript.onload = function () {
+                            if (jsFunctie && typeof window[jsFunctie] === "function") {
+                                setTimeout(() => window[jsFunctie](), 50); 
+                            }
+                        };
+                        elementScript.src = jsFisier;
+                        document.body.appendChild(elementScript); 
+                    } else {
+                        if (jsFunctie && typeof window[jsFunctie] === "function") {
+                            setTimeout(() => window[jsFunctie](), 50);
+                        }
+                    }
+                } else {
+                    if (jsFunctie && typeof window[jsFunctie] === "function") {
+                        setTimeout(() => window[jsFunctie](), 50);
+                    }
+                }
+
+            } catch (eroare) {
+                console.error('Eroare la schimbarea continutului:', eroare.message);
+            }
+        }
+    </script>
+</head>
+
+<body onload="schimbaContinut('acasa', null, null)">
+    <header>
+        <div class="logo-container">
+            <img src="imagini/outerWildsVenturesLogo.png" alt="Logo Outer Wilds Ventures" class="logo">
+            <h1>Outer Wilds Ventures</h1>
+        </div>
+        <nav>
+            <a href="#" onclick="schimbaContinut('acasa')">Acasă</a>
+            <a href="#" onclick="schimbaContinut('despre', null, 'initDespre')">Despre</a>
+            <a href="#" onclick="schimbaContinut('inregistreaza', null, 'initFormulare')">Înregistrează-te</a>
+            <a href="#" onclick="schimbaContinut('video', null, 'initVideoPreview')">Arhiva Video</a>
+            <a href="#" onclick="schimbaContinut('desen', null, 'initVideoPreview')">Harta Stelară</a>
+            <a href="#" onclick="schimbaContinut('invat', null, 'initInvata')">Învăț</a>
+
+            <a href="#" onclick="schimbaContinut('cumparaturi', 'js/cumparaturi.js', 'initCumparaturi')">Cumpărături</a>
+            <a href="#" onclick="schimbaContinut('persoane', 'js/persoane.js', 'incarcaPersoane')">Persoane</a>
+            <a href="#" onclick="schimbaContinut('verifica', null, 'initVerifica')">Verifică</a>
+        </nav>
+    </header>
+
+    <main id="continut">
+    </main>
+
+    <br>
+    <footer>
+        <hr>
+        <p>&copy; 2026. Outer Wilds Ventures - Programare Web</p>
+    </footer>
+</body>
+
+</html>
