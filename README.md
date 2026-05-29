@@ -10,7 +10,7 @@
 
 <br>
 
-**🌍 [Live Demo (Doar interfața Frontend)](https://outer-wilds-website.vercel.app/)**
+**🌍 [Live Demo ](https://outer-wilds-website.vercel.app/)**
 
 ---
 
