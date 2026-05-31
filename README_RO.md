@@ -3,6 +3,7 @@
 ![Outer Wilds Banner](continut/imagini/screenshots/home.png)
 
 > 🎓 **Proiect realizat pentru disciplina:** Programare Web
+> 
 > 👩‍🏫 **Profesor coordonator:** Bărbuța Delia
 >
 > 🛠️ *O aplicație web completă de tip **SPA (Single Page Application)** construită de la zero, având un frontend modern (Vanilla HTML/CSS/JS) și un backend custom (Server Python multi-threaded).*
