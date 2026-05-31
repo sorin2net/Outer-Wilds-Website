@@ -1,156 +1,103 @@
 # 🚀 Outer Wilds Ventures - Web Portal
-
 ![Outer Wilds Banner](continut/imagini/screenshots/home.png)
-
 <br>
-
-> 🎓 **Proiect realizat pentru disciplina:** Programare Web <br>
-> 👩‍🏫 **Profesor coordonator:** Bărbuța Delia <br><br>
-> 🛠️ *O aplicație web completă de tip **SPA (Single Page Application)** construită de la zero, având un frontend modern (Vanilla HTML/CSS/JS) și un backend custom (Server Python multi-threaded).*
-
+> 🎓 **Project created for the course:** Web Programming <br>
+> 👩‍🏫 **Supervising Professor:** Bărbuța Delia <br><br>
+> 🛠️ *A complete **SPA (Single Page Application)** web app built from scratch, featuring a modern frontend (Vanilla HTML/CSS/JS) and a custom backend (Multi-threaded Python Server).*
 <br>
-
-**🌍 [Live Demo ](https://outer-wilds-website.vercel.app/)**
-
+**🌍 [Live Demo](https://outer-wilds-website.vercel.app/)**
 ---
-
 <br>
+## 📖 About the Project
+This interactive portal serves as a database and control panel for the *Outer Wilds Ventures* space program. Users can explore the solar system, watch video archives, add supplies using in-browser databases, and register for the space program through a secure system connected to a custom Python server.
 
-## 📖 Despre Proiect
-
-Acest portal interactiv servește drept bază de date și panou de control pentru programul spațial *Outer Wilds Ventures*. Utilizatorii pot explora sistemul solar, viziona arhive video, adăuga provizii folosind baze de date in-browser și se pot înregistra în programul spațial printr-un sistem securizat conectat la un server Python custom.
-
-Proiectul nu folosește niciun framework extern (fără React, Angular sau Express), demonstrând o înțelegere profundă a tehnologiilor web fundamentale.
-
+The project uses no external frameworks (no React, Angular, or Express), demonstrating a deep understanding of fundamental web technologies.
 <br>
-
 ---
-
-## 📸 Galerie Foto (Funcționalități)
-
+## 📸 Screenshot Gallery (Features)
 <br>
-
-### 1. Navigare SPA & Jurnal de Explorare
-Navigare rapidă fără reîncărcarea paginii. Funcție interactivă de *Hover Preview* care declanșează videoclipuri explicative deasupra fiecărei planete.
-
-![Planete și Jurnal](continut/imagini/screenshots/planets.png)
-
+### 1. SPA Navigation & Exploration Journal
+Fast navigation without page reloads. An interactive *Hover Preview* feature that triggers explanatory videos above each planet.
+![Planets & Journal](continut/imagini/screenshots/planets.png)
 <br><br>
-
-### 2. Harta Stelară (SVG Animată)
-O reprezentare grafică complexă a sistemului solar, creată exclusiv din cod `<svg>` (utilizând elemente precum `rect`, `circle`, `ellipse`, `path`, `polygon`).
-
-![Harta Stelară SVG](continut/imagini/screenshots/svg.png)
-
+### 2. Star Map (Animated SVG)
+A complex graphical representation of the solar system, created entirely from `<svg>` code (using elements such as `rect`, `circle`, `ellipse`, `path`, `polygon`).
+![SVG Star Map](continut/imagini/screenshots/svg.png)
 <br><br>
-
-### 3. Panoul "Învăț" (Canvas & API-uri Browser)
-Sistem de cartografiere interactiv desenat în `<canvas>`, completat de citirea datelor telemetrice live (Geolocație, Navigator, Ceas în timp real) și manipularea dinamică a tabelelor.
-
-![Modul Cartografiere Canvas](continut/imagini/screenshots/learn.png)
-
+### 3. "Learn" Panel (Canvas & Browser APIs)
+An interactive cartography system drawn in `<canvas>`, supplemented by live telemetric data reading (Geolocation, Navigator, Real-time Clock) and dynamic table manipulation.
+![Canvas Cartography Module](continut/imagini/screenshots/learn.png)
 <br><br>
-
-### 4. Gestiunea Proviziilor (OOP, IndexedDB & Web Workers)
-Un sistem de stocare avansat scris în JavaScript Orientat pe Obiecte (Clase/Interfețe). Permite comutarea live între `LocalStorage` și `IndexedDB`. Adăugarea produselor este procesată în fundal folosind un **Web Worker**.
-
-![Cumpărături și Provizii](continut/imagini/screenshots/shopping.png)
-
+### 4. Supplies Management (OOP, IndexedDB & Web Workers)
+An advanced storage system written in Object-Oriented JavaScript (Classes/Interfaces). Supports live switching between `LocalStorage` and `IndexedDB`. Product additions are processed in the background using a **Web Worker**.
+![Shopping & Supplies](continut/imagini/screenshots/shopping.png)
 <br><br>
-
-### 5. Formular de Înregistrare & Validare
-Formular HTML5 complex cu validare client-side și server-side. Butonul de submit este protejat de o bifă pentru Termeni și Condiții. Datele sunt trimise prin **AJAX (Fetch API)**.
-
-![Formular Inregistrare](continut/imagini/screenshots/form.png)
-
+### 5. Registration Form & Validation
+A complex HTML5 form with client-side and server-side validation. The submit button is guarded by a Terms and Conditions checkbox. Data is sent via **AJAX (Fetch API)**.
+![Registration Form](continut/imagini/screenshots/form.png)
 <br><br>
-
-### 6. Autentificare & Bază de Date
-Sistem de login ce interoghează baza de date (`utilizatori.json`). Serverul Python previne conturile duplicate (returnând codul `409 Conflict`).
-
-![Sistem Verificare](continut/imagini/screenshots/auth.png)
-
+### 6. Authentication & Database
+A login system that queries the database (`utilizatori.json`). The Python server prevents duplicate accounts (returning `409 Conflict`).
+![Verification System](continut/imagini/screenshots/auth.png)
 <br><br>
-
-### 7. Prezentare & Arhivă Video
-Integrare iFrame YouTube și pagini de prezentare cu design responsiv folosind CSS Flexbox.
-
-![Fondatori](continut/imagini/screenshots/about.png)
-
+### 7. Presentation & Video Archive
+YouTube iFrame integration and presentation pages with responsive design using CSS Flexbox.
+![Founders](continut/imagini/screenshots/about.png)
 <br>
-
-![Arhiva Video](continut/imagini/screenshots/videos.png)
-
+![Video Archive](continut/imagini/screenshots/videos.png)
 <br>
-
 ---
-
-## 🛠️ Tehnologii Utilizate
-
+## 🛠️ Technologies Used
 ### 🖥️ Frontend
-*   **HTML5:** Structură semantică, formulare complexe, `<video>`, `<audio>`, `<canvas>`, `<svg>`.
-*   **CSS3:** Design responsiv (Mobile, Tablet, Desktop, **Print**), Flexbox, CSS Grid, Pseudo-clase (`:hover`, `:nth-child`, `:disabled`) și Pseudo-elemente (`::before`, `::after`), `@media queries`.
+*   **HTML5:** Semantic structure, complex forms, `<video>`, `<audio>`, `<canvas>`, `<svg>`.
+*   **CSS3:** Responsive design (Mobile, Tablet, Desktop, **Print**), Flexbox, CSS Grid, Pseudo-classes (`:hover`, `:nth-child`, `:disabled`) and Pseudo-elements (`::before`, `::after`), `@media queries`.
 *   **JavaScript (Vanilla / ES6+):**
-    *   Arhitectură **Single Page Application (SPA)** folosind `fetch` pentru a injecta HTML.
-    *   Programare Orientată pe Obiecte (OOP) cu Clase.
-    *   Manipulare DOM avansată.
-    *   **Promisiuni (Promises) & Async/Await**.
-    *   **Web Workers** pentru procesare multi-threading în browser.
-    *   **LocalStorage** și **IndexedDB** pentru persistența datelor.
-    *   API-uri de browser (Geolocation).
-
+    *   **Single Page Application (SPA)** architecture using `fetch` to inject HTML.
+    *   Object-Oriented Programming (OOP) with Classes.
+    *   Advanced DOM manipulation.
+    *   **Promises & Async/Await**.
+    *   **Web Workers** for multi-threaded processing in the browser.
+    *   **LocalStorage** and **IndexedDB** for data persistence.
+    *   Browser APIs (Geolocation).
 <br>
-
-### ⚙️ Backend (Server Custom Python)
-*   **Sockets (`socket`):** Server HTTP construit de la zero, fără librării framework.
-*   **Multithreading (`concurrent.futures.ThreadPoolExecutor`):** Poate deservi până la 50 de utilizatori simultan.
-*   **GZIP Compression:** Arhivează automat resursele `.html`, `.css` și `.js` pentru a optimiza traficul pe rețea.
-*   **JSON Database:** Procesează cereri `POST`, citește/scrie în `utilizatori.json` și gestionează erori de rețea (Returnează statusuri HTTP corecte: `200 OK`, `404 Not Found`, `409 Conflict`, `500 Server Error`).
-
+### ⚙️ Backend (Custom Python Server)
+*   **Sockets (`socket`):** HTTP server built from scratch, without any framework libraries.
+*   **Multithreading (`concurrent.futures.ThreadPoolExecutor`):** Can serve up to 50 simultaneous users.
+*   **GZIP Compression:** Automatically compresses `.html`, `.css`, and `.js` resources to optimize network traffic.
+*   **JSON Database:** Processes `POST` requests, reads/writes to `utilizatori.json`, and handles network errors (Returns correct HTTP statuses: `200 OK`, `404 Not Found`, `409 Conflict`, `500 Server Error`).
 <br>
-
 ---
+## ⚙️ How to Run the Project Locally
+Because the project has its own web server, it cannot be opened simply by double-clicking `index.html` (due to CORS policies and the need for the database API).
 
-## ⚙️ Cum să rulezi proiectul local
-
-Deoarece proiectul are propriul său server web în spate, nu poate fi deschis simplu dând dublu-click pe `index.html` (datorită politicilor CORS și necesității API-ului de baze de date). 
-
-Urmează acești pași pentru a-l rula:
-
-1. Asigură-te că ai **Python 3** instalat pe calculator.
-2. Deschide un terminal (Command Prompt / PowerShell / Bash).
-3. Navighează în folderul proiectului, apoi în folderul serverului:
+Follow these steps to run it:
+1. Make sure you have **Python 3** installed on your machine.
+2. Open a terminal (Command Prompt / PowerShell / Bash).
+3. Navigate to the project folder, then into the server folder:
 ```
-cd calea/catre/Outer-Wilds-Website/server
+cd path/to/Outer-Wilds-Website/server
 ```
-
-4. Pornește serverul Python:
+4. Start the Python server:
 ```
 python server_web.py
 ```
-
-5. Deschide browserul preferat și accesează adresa:
+5. Open your preferred browser and go to:
 ```
 http://localhost:5678
 ```
-
 ---
-
-## 📂 Structura Proiectului
-
+## 📂 Project Structure
 ```
 📦 Outer-Wilds-Website
- ┣ 📂 continut               # Frontend-ul aplicației (SPA)
- ┃ ┣ 📂 css                  # Fişiere de stilizare (stil.css)
- ┃ ┣ 📂 imagini              # Resurse grafice şi screenshots
- ┃ ┣ 📂 js                   # Logica client-side (script.js, cumparaturi.js, worker.js)
- ┃ ┣ 📂 resurse              # Baza de date (utilizatori.json)
- ┃ ┣ 📂 video                # Fişiere MP4 pentru previzualizări
- ┃ ┣ 📜 index.html           # Pagina principală (Containerul SPA)
- ┃ ┗ 📜 *.html               # Părţile aplicaţiei (acasa, despre, invat, etc.)
- ┗ 📂 server                 # Backend-ul aplicaţiei
-   ┗ 📜 server_web.py        # Serverul HTTP Custom scris în Python
+ ┣ 📂 continut               # Application frontend (SPA)
+ ┃ ┣ 📂 css                  # Stylesheet files (stil.css)
+ ┃ ┣ 📂 imagini              # Graphic resources and screenshots
+ ┃ ┣ 📂 js                   # Client-side logic (script.js, cumparaturi.js, worker.js)
+ ┃ ┣ 📂 resurse              # Database (utilizatori.json)
+ ┃ ┣ 📂 video                # MP4 files for previews
+ ┃ ┣ 📜 index.html           # Main page (SPA Container)
+ ┃ ┗ 📜 *.html               # Application sections (home, about, learn, etc.)
+ ┗ 📂 server                 # Application backend
+   ┗ 📜 server_web.py        # Custom HTTP Server written in Python
 ```
-
 ---
-
