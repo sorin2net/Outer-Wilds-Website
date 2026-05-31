@@ -3,6 +3,7 @@
 ![Outer Wilds Banner](continut/imagini/screenshots/home.png)
 
 > 🎓 **Project created for the course:** Web Programming
+> 
 > 👩‍🏫 **Supervising Professor:** Bărbuța Delia
 >
 > 🛠️ *A complete **SPA (Single Page Application)** web app built from scratch, featuring a modern frontend (Vanilla HTML/CSS/JS) and a custom backend (Multi-threaded Python Server).*
