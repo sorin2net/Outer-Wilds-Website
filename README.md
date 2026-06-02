@@ -3,6 +3,7 @@
 ![Outer Wilds Banner](continut/imagini/screenshots/home.png)
 
 > 🎓 **Project created for the course:** Web Programming
+>
 > 
 > 👩‍🏫 **Supervising Professor:** Bărbuța Delia
 >
